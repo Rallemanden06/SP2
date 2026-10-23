@@ -10,7 +10,10 @@ public abstract class Title {
     }
 
     public double calculateRoyalty() {
-        return rate * calculatePoints();
+        double t = rate * calculatePoints();
+        int n = 2;
+
+        return Math.round(t * Math.pow(10, n)) / Math.pow(10, n);
     }
 
     protected abstract double calculatePoints();
