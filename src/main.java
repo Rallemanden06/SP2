@@ -2,6 +2,8 @@ public class main {
 
     public static void main(String[] args){
 
+        Author a = new Author("Bob bobsen");
+
         Title t1 = new PrintedBook("Book1", "TE", 140, 166);
         Title t2 = new AudioBook("Book2","FAG",140,120);
         Title t3 = new EBook("BooK3","BI",97,50,205,360000,false);
@@ -17,5 +19,16 @@ public class main {
         System.out.println("Point for book4: " + t4.calculateRoyalty());
         System.out.println();
         System.out.println("Point for book5: " + t5.calculateRoyalty());
+        System.out.println();
+
+        a.addTitle(t1);
+        a.addTitle(t2);
+        a.addTitle(t3);
+        a.addTitle(t4);
+        a.addTitle(t5);
+
+        System.out.println(a.getName() + " Royalties: " + a.calculateRoyalties());
+
+
     }
 }
